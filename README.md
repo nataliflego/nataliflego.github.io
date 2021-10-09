@@ -4,4 +4,4 @@ hej haj
 
 more, nebo, sunce, fjaka
 
-Adresa web stranice je: https://nataliflego.github.io
+Adresa web stranice jest: https://nataliflego.github.io
