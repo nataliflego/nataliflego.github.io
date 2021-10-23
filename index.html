@@ -1,27 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natali Flego</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script> src = "./main.js"</script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- za formu koja ne dela
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"> </script>
+    <script type="text/javascript">
+            (function () {
+                // https://dashboard.emailjs.com/admin/integration
+                emailjs.init('YOUR_USER_ID');
+            })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+-->
 </head>
-<style>
-    body{
-        background-color: plum;
-    }
-    h1, h3, p , div {
-        text-align: center;
-    };
-    
-</style>
-<body>
- <br><br><br>
- <h1 style="text-decoration-line: underline;">PROGRAMSKO INŽENJERSTVO </h1>
- <h3 style ="text-decoration-line: underline;">Moja prva osobna stranica na ovom kolegiju</h3>
- <p><b>Natali Flego</b></p>
- <div>
-    <img src="https://i.pinimg.com/originals/9f/1e/53/9f1e539b79ef387e6ff6a9176edcc4e0.jpg" alt="quote"  width="400" height="500">
- </div>
+
+<body class="bg-purple-300 font-mono text-center ">
+    <div class="bg-white ml-3 mr-3 mt-3 py-5 rounded-3xl grid grid-cols-5 space-x-2">
+        <div><img src="img/smile1.png" class=" w-5/12 ml-auto rounded-3xl my-6 " /></div>
+        <div><img src="img/job.jpg" class="w-5/12  rounded-3xl my-6  " /></div>
+        <div class="text-5xl my-auto text-center text-bold font-bold">PROGRAMSKO INŽENJERSTVO </div>
+        <div><img src="img/adv.jpg" class="w-5/12  ml-auto rounded-3xl my-6 " /></div>
+        <div><img src="img1/vibes1.jpg" class="w-5/12 rounded-3xl my-6 " /></div>
+    </div>
+    <div class="bg-white ml-3 mr-3 mt-3 py-5  rounded-3xl ">
+        <h3>Moja prva osobna stranica na ovom kolegiju</h3>
+        <p class="text-xl"><b>Natali Flego</b></p>
+    </div>
+
+    <!-- forma -->
+    <div class="bg-white ml-3 mr-3 mt-3 py-5 rounded-3xl">
+        <br>
+        <h1><b>Kontakt</b></h1><br>
+        <form action="https://formspree.io/natali.flego6@gmail.com" method="POST">
+            <label>
+                E-mail
+                <input class="bg-purple-300" type="email" name="email" class="email" />
+            </label> <br><br>
+            <label>
+                Ime
+                <input class="bg-purple-300" type="text" name="ime" class="ime" />
+            </label><br><br>
+            <label>
+                Poruka
+                <textarea class="poruka bg-purple-300"></textarea>
+            </label> <br><br>
+            <div class="status">
+
+            </div>
+            <button class="bg-purple-300 p-2" type="submit" class="submit">
+                Pošalji
+            </button>
+        </form>
+        <br><br><br>
+    </div>
+
+    <!--
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+    -->
 </body>
+
 </html>
